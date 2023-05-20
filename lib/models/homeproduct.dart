@@ -1,7 +1,7 @@
 class ProductDataModel {
   final String id;
   final String name;
-  final String description;
+
   final int price;
   final String imageUrl;
   bool? isCartSelected;
@@ -9,7 +9,6 @@ class ProductDataModel {
   ProductDataModel(
       {required this.id,
       required this.name,
-      required this.description,
       required this.price,
       required this.imageUrl,
       this.isCartSelected}) {
@@ -19,14 +18,12 @@ class ProductDataModel {
   ProductDataModel copyWith(
           {String? id,
           String? name,
-          String? description,
           int? price,
           String? imageUrl,
           bool? isCartSelected}) =>
       ProductDataModel(
           id: id ?? this.id,
           name: name ?? this.name,
-          description: description ?? this.description,
           price: price ?? this.price,
           imageUrl: imageUrl ?? this.imageUrl,
           isCartSelected: isCartSelected ?? this.isCartSelected);

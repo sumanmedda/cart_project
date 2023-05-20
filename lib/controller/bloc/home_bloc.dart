@@ -25,7 +25,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
               (e) => ProductDataModel(
                 id: e['id'],
                 name: e['name'],
-                description: e['description'],
                 price: e['price'],
                 imageUrl: e['imageUrl'],
               ),

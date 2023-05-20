@@ -2,34 +2,31 @@ class ProductsData {
   static List<Map<String, dynamic>> products = [
     {
       'id': '1',
-      'name': 'Brown Eggs',
-      'description': 'Farm-fresh brown eggs',
-      'price': 200,
+      'name': 'Iphone 14 Pro Max',
+      'price': 600,
       'imageUrl':
-          'https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg',
+          'https://www.jiomart.com/images/product/420x420/493177795/apple-iphone-14-pro-max-128-gb-space-black-digital-o493177795-p593687915-0-202209091829.jpeg',
     },
     {
       'id': '2',
-      'name': 'Grapes',
-      'description': 'Organic, locally grown apples',
-      'price': 400,
+      'name': 'Samsung S22 Ultra',
+      'price': 550,
       'imageUrl':
-          'https://www.jiomart.com/images/product/original/590000452/sharad-seedless-grapes-1-kg-product-images-o590000452-p590116963-0-202203171004.jpg',
+          'https://cdn.shopify.com/s/files/1/0615/1631/6729/products/Samsung-Galaxy-S22-Ultra-Colors_8d246b07-cb6b-4f47-822e-9b72d1af6977.jpg?v=1664086000',
     },
     {
       'id': '3',
-      'name': 'Bread',
-      'description': 'Brown Bread, Tasty',
-      'price': 300,
-      'imageUrl': 'https://thumbs.dreamstime.com/b/bread-cut-14027607.jpg',
+      'name': 'Oneplus 11 pro',
+      'price': 400,
+      'imageUrl':
+          'https://specifications-pro.com/wp-content/uploads/2022/07/OnePlus-11-Pro.jpg',
     },
     {
       'id': '4',
-      'name': 'Bananas',
-      'description': 'Fresh bananas from Ecuador',
-      'price': 100,
+      'name': 'ViVo x90 Pro',
+      'price': 300,
       'imageUrl':
-          'https://cdn.shopify.com/s/files/1/0258/4307/3103/products/asset_2_800x.jpg?v=1571839043',
+          'https://cdn.celekt.com/wp-content/uploads/2023/05/vivo-X90-Pro-5G-Legendary-Black-1.webp',
     },
   ];
 }
