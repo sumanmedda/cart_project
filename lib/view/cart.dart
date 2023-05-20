@@ -17,7 +17,19 @@ class _CartState extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cart Items'),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.keyboard_backspace_outlined),
+          color: Colors.black,
+        ),
+        title: const Text(
+          'Cart Items',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: BlocBuilder<HomeBloc, HomeState>(
         // bloc: cartBloc,
@@ -92,8 +104,16 @@ class _CartState extends State<Cart> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  const Text('Total Amount : '),
-                                  Text('₹${amount.toString()}'),
+                                  const Text(
+                                    'Total Amount : ',
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Text(
+                                    '₹${amount.toString()}',
+                                    style: const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ],
                               ),
                             )),
