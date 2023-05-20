@@ -1,6 +1,6 @@
 # cart_project
 
-A Flutter cart project where data is fetched from fakeStoreAPI and user can add/remove items to cart and also check the total amount.
+A Flutter cart project where data is fetched from and the user can add/remove items to the cart and also check the total amount.
 
 ## Getting Started
 
