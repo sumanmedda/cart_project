@@ -11,12 +11,7 @@ A Flutter cart project where data is fetched from fakeStoreAPI and user can add/
     4. connect a device / start emulator 
     5. run the app
 
-- API Used
-    1. `fakestoreapi.com`
-
 - Packages Used
     1. flutter_bloc: ^8.1.2 : for state management
-    2. dio: ^5.1.2 : for making api(http) calls
-    3. pretty_dio_logger: ^1.3.1 : for displaying data fetched from api on console log
-    4. connectivity: ^3.0.6 : to check connectivity
+   
  
