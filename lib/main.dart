@@ -13,11 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // Bloc to get products and display on homepage
     return BlocProvider(
       create: (context) => HomeBloc(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Carts Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

@@ -1,4 +1,5 @@
 class ProductsData {
+  // custom api to show data
   static List<Map<String, dynamic>> products = [
     {
       'id': '1',

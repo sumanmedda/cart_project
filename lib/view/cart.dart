@@ -32,20 +32,23 @@ class _CartState extends State<Cart> {
         ),
       ),
       body: BlocBuilder<HomeBloc, HomeState>(
-        // bloc: cartBloc,
         builder: (context, state) {
+          // setting value of success state
           final successState = state as HomeLoadedSuccessState;
           List<ProductDataModel> cartsList = successState.carts;
 
+          // adding amount
           for (int i = 0; i < cartsList.length; i++) {
             amount = amount + cartsList[i].price;
           }
 
+          // when app is in loading state
           switch (state.runtimeType) {
             case HomeLoadingState:
               return const Center(
                 child: CircularProgressIndicator(),
               );
+            // when data is in loaded state
             case HomeLoadedSuccessState:
               return amount == 0
                   ? const Center(
@@ -55,6 +58,7 @@ class _CartState extends State<Cart> {
                       children: [
                         Expanded(
                           flex: 20,
+                          // listview to display items in cart
                           child: ListView.builder(
                               itemCount: successState.carts.length,
                               itemBuilder: (context, index) {
@@ -120,6 +124,7 @@ class _CartState extends State<Cart> {
                       ],
                     );
 
+            // when some error occurs
             case HomeErrorState:
               return const Center(child: Text('Error'));
             default:
@@ -130,6 +135,7 @@ class _CartState extends State<Cart> {
     );
   }
 
+  // subtracting amount
   calAmount(List<ProductDataModel> cartsList) {
     for (int i = 0; i < cartsList.length; i++) {
       amount = amount - cartsList[i].price;

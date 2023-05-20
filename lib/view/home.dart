@@ -20,18 +20,20 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
-  // final HomeBloc homeBloc = HomeBloc();
-
   @override
   Widget build(BuildContext context) {
+    // init bloc builder to get homestate
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
+        // using switch case to get current states information
         switch (state.runtimeType) {
+          // while loading
           case HomeLoadingState:
             return const Scaffold(
                 body: Center(
               child: CircularProgressIndicator(),
             ));
+          // when data is loaded
           case HomeLoadedSuccessState:
             final successState = state as HomeLoadedSuccessState;
             return Scaffold(
@@ -57,12 +59,13 @@ class _HomeState extends State<Home> {
               body: ListView.builder(
                   itemCount: successState.products.length,
                   itemBuilder: (context, index) {
+                    // custom widget to display products
                     return ProductTileWidget(
-                        // homeBloc: homeBloc,
                         productDataModel: successState.products[index]);
                   }),
             );
 
+          // if something went wrong
           case HomeErrorState:
             return const Scaffold(body: Center(child: Text('Error')));
           default:

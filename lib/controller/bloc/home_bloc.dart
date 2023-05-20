@@ -8,6 +8,8 @@ import '../api/products.dart';
 part 'home_event.dart';
 part 'home_state.dart';
 
+// bloc manages the events and emits the particular states
+
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
     on<HomeInitialEvent>(homeInitialEvent);

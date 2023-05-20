@@ -1,5 +1,6 @@
 part of 'home_bloc.dart';
 
+// states are called on particular events occurs
 abstract class HomeState {}
 
 class HomeInitial extends HomeState {}

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../models/homeproduct.dart';
 import '../bloc/home_bloc.dart';
 
+// custom widget to show products on homepage
 class ProductTileWidget extends StatelessWidget {
   final ProductDataModel productDataModel;
   const ProductTileWidget({
